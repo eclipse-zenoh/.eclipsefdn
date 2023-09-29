@@ -248,9 +248,20 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",      
       has_projects: false,
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
     orgs.newRepo('zenoh-pico') {
       allow_merge_commit: true,
