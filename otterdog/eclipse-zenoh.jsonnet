@@ -307,7 +307,7 @@ orgs.newOrg('eclipse-zenoh') {
         "ros2",
         "robotics",
         "edge-computing",
-        "zenoh"
+        "zenoh",
         "cyclonedds",
         "dds",
       ],
