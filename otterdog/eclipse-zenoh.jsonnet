@@ -309,7 +309,6 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-plugin-ros2dds') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in for ROS2 with a DDS RMW.",
       homepage: "",
