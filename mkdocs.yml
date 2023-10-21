@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://eclipse-zenoh.github.io/.eclipsefdn/
 
+repo_name: eclipse-zenoh/.eclipsefdn
+repo_url: https://github.com/eclipse-zenoh/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
