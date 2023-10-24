@@ -2,7 +2,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-zenoh') {
   settings+: {
-    default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     members_can_change_project_visibility: false,
@@ -45,6 +44,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Homebrew tap for Eclipse zenoh formulae (MacOS)",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('roadmap') {
       allow_merge_commit: true,
@@ -53,6 +55,9 @@ orgs.newOrg('eclipse-zenoh') {
       has_discussions: true,
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh') {
       allow_merge_commit: true,
@@ -83,6 +88,9 @@ orgs.newOrg('eclipse-zenoh') {
         "zenoh"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-backend-filesystem') {
       allow_merge_commit: true,
@@ -92,6 +100,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Backend and Storages for zenoh using the file system",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-backend-influxdb') {
       allow_merge_commit: true,
@@ -101,6 +112,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Backend and Storages for zenoh using InfluxDB",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-backend-rocksdb') {
       allow_merge_commit: true,
@@ -110,6 +124,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Backend and Storages for zenoh using RocksDB",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-backend-s3') {
       allow_merge_commit: true,
@@ -118,6 +135,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Backend and Storages for Zenoh using AWS S3 API",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-backend-sql') {
       allow_merge_commit: true,
@@ -126,6 +146,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Backend and Storages for zenoh using an SQL database (SQLITE3, MySQL, PostgreSQL...)",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-c') {
       allow_merge_commit: true,
@@ -146,6 +169,9 @@ orgs.newOrg('eclipse-zenoh') {
         "ros2"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-c/135565/') {
           content_type: "json",
@@ -164,6 +190,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "C++ API for zenoh",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-csharp') {
       allow_merge_commit: true,
@@ -173,6 +202,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "C# API for zenoh",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-demos') {
       allow_merge_commit: true,
@@ -182,6 +214,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Some demos using Eclipse zenoh",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-flow') {
       allow_merge_commit: true,
@@ -201,6 +236,9 @@ orgs.newOrg('eclipse-zenoh') {
         "rust-lang"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-flow-python') {
       allow_merge_commit: true,
@@ -210,6 +248,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Zenoh Flow Python API",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-go') {
       allow_merge_commit: true,
@@ -227,6 +268,9 @@ orgs.newOrg('eclipse-zenoh') {
         "zenoh"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-java') {
       allow_merge_commit: true,
@@ -243,6 +287,9 @@ orgs.newOrg('eclipse-zenoh') {
         "zenoh"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-kotlin') {
       allow_merge_commit: true,
@@ -250,10 +297,13 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",      
+      gh_pages_source_path: "/",
       has_projects: false,
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -271,6 +321,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "Eclipse zenoh for pico devices",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-plugin-dds') {
       allow_merge_commit: true,
@@ -289,6 +342,9 @@ orgs.newOrg('eclipse-zenoh') {
         "zenoh"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-plugin-mqtt') {
       allow_merge_commit: true,
@@ -298,6 +354,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "A Zenoh plug-in that allows to integrate and/or route MQTT pub/sub with Eclipse Zenoh.",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-plugin-ros1') {
       allow_merge_commit: true,
@@ -305,6 +364,9 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-plugin-ros2dds') {
       allow_merge_commit: true,
@@ -314,14 +376,17 @@ orgs.newOrg('eclipse-zenoh') {
       homepage: "",
       secret_scanning_push_protection: "disabled",
       topics+: [
-        "ros2",
-        "robotics",
-        "edge-computing",
-        "zenoh",
         "cyclonedds",
         "dds",
+        "edge-computing",
+        "robotics",
+        "ros2",
+        "zenoh"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-plugin-webserver') {
       allow_merge_commit: true,
@@ -331,6 +396,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "A zenoh plug-in implementing an HTTP server mapping URLs to zenoh paths. This plugin can be used to set-up a Web server where the resources are retrieved from geo-distributed zenoh storages, each leveraging various backends (file system, database, memory...)",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-plugin-zenoh-flow') {
       allow_merge_commit: true,
@@ -339,6 +407,9 @@ orgs.newOrg('eclipse-zenoh') {
       description: "A Zenoh plug-in that allows to integrate a Zenoh Flow runtime within a Zenoh router.",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('zenoh-python') {
       allow_merge_commit: true,
@@ -357,6 +428,9 @@ orgs.newOrg('eclipse-zenoh') {
         "zenoh"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-python/135566/') {
           events+: [
