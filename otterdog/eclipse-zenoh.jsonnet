@@ -373,7 +373,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in for ROS2 with a DDS RMW.",
-      homepage: "",
+      homepage: "https://zenoh.io",
       secret_scanning_push_protection: "disabled",
       topics+: [
         "cyclonedds",
