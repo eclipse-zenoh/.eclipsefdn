@@ -93,6 +93,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-backend-filesystem') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -105,6 +106,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-backend-influxdb') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -117,6 +119,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-backend-rocksdb') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -129,6 +132,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-backend-s3') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -140,6 +144,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-backend-sql') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -151,6 +156,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-c') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -271,6 +277,11 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets: [
+        orgs.newRepoSecret('DELETEME') {
+          value: "********",
+        },
+      ],
     },
     orgs.newRepo('zenoh-java') {
       allow_merge_commit: true,
@@ -292,6 +303,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-kotlin') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -326,6 +338,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-plugin-dds') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -347,6 +360,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-plugin-mqtt') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -359,6 +373,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-plugin-ros1') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -369,6 +384,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-plugin-ros2dds') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -389,6 +405,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-plugin-webserver') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -401,6 +418,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-plugin-zenoh-flow') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -412,6 +430,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-python') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
