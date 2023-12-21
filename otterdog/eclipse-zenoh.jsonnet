@@ -314,6 +314,9 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Java APIs for zenoh",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
       homepage: "http://zenoh.io",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -325,6 +328,14 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
     orgs.newRepo('zenoh-kotlin') {
       allow_auto_merge: true,
