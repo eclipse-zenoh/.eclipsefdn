@@ -334,7 +334,8 @@ orgs.newOrg('eclipse-zenoh') {
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "gh-pages"
+            "gh-pages",
+            "master"
           ],
           deployment_branch_policy: "selected",
         },
@@ -362,7 +363,8 @@ orgs.newOrg('eclipse-zenoh') {
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
-            "gh-pages"
+            "gh-pages",
+            "main"
           ],
           deployment_branch_policy: "selected",
         },
