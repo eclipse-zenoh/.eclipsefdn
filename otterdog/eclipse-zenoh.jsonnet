@@ -24,6 +24,9 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newOrgSecret('DOCKER_COM_USERNAME') {
       value: "********",
     },
+    orgs.newOrgSecret('BOT_TOKEN_WORKFLOW') {
+      value: "pass:/bots/iot.zenoh/github.com/api-token-workflow",
+    },
     orgs.newOrgSecret('PYPI_ORG_TOKEN') {
       value: "********",
     },
