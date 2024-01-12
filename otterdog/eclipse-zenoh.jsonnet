@@ -39,6 +39,7 @@ orgs.newOrg('eclipse-zenoh') {
   ],
   _repositories+:: [
     orgs.newRepo('homebrew-zenoh') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -51,6 +52,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('roadmap') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -62,6 +64,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -192,6 +195,7 @@ orgs.newOrg('eclipse-zenoh') {
       ],
     },
     orgs.newRepo('zenoh-cpp') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -203,6 +207,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-csharp') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -215,6 +220,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-demos') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -227,6 +233,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-flow') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -249,6 +256,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-flow-python') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -261,6 +269,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-go') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -281,6 +290,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-java') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -336,6 +346,7 @@ orgs.newOrg('eclipse-zenoh') {
       ],
     },
     orgs.newRepo('zenoh-pico') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
