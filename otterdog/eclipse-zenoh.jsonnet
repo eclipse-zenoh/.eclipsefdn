@@ -1,18 +1,36 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
+local customRuleset(name) = 
+  orgs.newRepoRuleset(name) {
+    allows_updates: true,
+    bypass_actors+: [
+      "#Write"
+    ],
+    include_refs+: [
+      std.format("refs/heads/%s", name),
+    ],
+    requires_pull_request: false,
+    required_approving_review_count: null,
+    required_status_checks+: [
+      "ci"
+    ],
+    requires_commit_signatures: false,
+    requires_last_push_approval: false,
+    requires_review_thread_resolution: false,
+  };
+
 orgs.newOrg('eclipse-zenoh') {
   settings+: {
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse zenoh",
-    packages_containers_internal: false,
-    packages_containers_public: false,
     readers_can_create_discussions: true,
     two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
     },
+    default_branch_name: "main",
   },
   secrets+: [
     orgs.newOrgSecret('CRATES_IO_TOKEN') {
@@ -39,9 +57,9 @@ orgs.newOrg('eclipse-zenoh') {
   ],
   _repositories+:: [
     orgs.newRepo('homebrew-zenoh') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Homebrew tap for Eclipse zenoh formulae (MacOS)",
       secret_scanning_push_protection: "disabled",
@@ -51,6 +69,7 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('roadmap') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -62,9 +81,9 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "zenoh unifies data in motion, data in-use, data at rest and computations. It carefully blends traditional pub/sub with geo-distributed storages, queries and computations, while retaining a level of time and space efficiency that is well beyond any of the mainstream stacks.",
@@ -93,12 +112,14 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      rulesets: [
+        customRuleset("main"),
+      ],
     },
     orgs.newRepo('zenoh-backend-filesystem') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using the file system",
       secret_scanning_push_protection: "disabled",
@@ -106,17 +127,14 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-backend-influxdb') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using InfluxDB",
       secret_scanning_push_protection: "disabled",
@@ -124,17 +142,14 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-backend-rocksdb') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using RocksDB",
       secret_scanning_push_protection: "disabled",
@@ -142,10 +157,8 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-backend-s3') {
@@ -159,10 +172,8 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-backend-sql') {
@@ -181,7 +192,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "C API for Zenoh",
@@ -210,13 +220,12 @@ orgs.newOrg('eclipse-zenoh') {
           ],
         },
       ],
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-cpp') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -228,9 +237,9 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-csharp') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "C# API for zenoh",
       secret_scanning_push_protection: "disabled",
@@ -240,9 +249,9 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-demos') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Some demos using Eclipse zenoh",
       secret_scanning_push_protection: "disabled",
@@ -252,9 +261,9 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-flow') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "zenoh-flow aims at providing a zenoh-based data-flow programming framework for computations that span from the cloud to the device.",
       homepage: "",
@@ -274,9 +283,9 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-flow-python') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Zenoh Flow Python API",
       secret_scanning_push_protection: "disabled",
@@ -286,9 +295,9 @@ orgs.newOrg('eclipse-zenoh') {
       },
     },
     orgs.newRepo('zenoh-go') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Go-lang API for zenoh",
       homepage: "http://zenoh.io",
@@ -304,16 +313,11 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('DELETEME') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-java') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Java APIs for zenoh",
@@ -340,6 +344,9 @@ orgs.newOrg('eclipse-zenoh') {
           deployment_branch_policy: "selected",
         },
       ],
+      rulesets: [
+        customRuleset("main"),
+      ],
     },
     orgs.newRepo('zenoh-kotlin') {
       allow_auto_merge: true,
@@ -355,11 +362,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -369,11 +371,14 @@ orgs.newOrg('eclipse-zenoh') {
           deployment_branch_policy: "selected",
         },
       ],
+      rulesets: [
+        customRuleset("main"),
+      ],
     },
     orgs.newRepo('zenoh-pico') {
+      allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "Eclipse zenoh for pico devices",
       secret_scanning_push_protection: "disabled",
@@ -386,7 +391,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "A zenoh plug-in that allows to transparently route DDS data.  This plugin can be used by DDS applications, such as ROS2 robotic applications and others, to leverage the zenoh for geographical routing or for better scaling discovery.",
       homepage: "",
@@ -403,17 +407,14 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-plugin-mqtt') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in that allows to integrate and/or route MQTT pub/sub with Eclipse Zenoh.",
       secret_scanning_push_protection: "disabled",
@@ -421,10 +422,8 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-plugin-ros1') {
@@ -437,10 +436,8 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-plugin-ros2dds') {
@@ -463,17 +460,14 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-plugin-webserver') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       description: "A zenoh plug-in implementing an HTTP server mapping URLs to zenoh paths. This plugin can be used to set-up a Web server where the resources are retrieved from geo-distributed zenoh storages, each leveraging various backends (file system, database, memory...)",
       secret_scanning_push_protection: "disabled",
@@ -481,10 +475,8 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
     orgs.newRepo('zenoh-plugin-zenoh-flow') {
@@ -503,7 +495,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Python API for zenoh",
@@ -527,10 +518,8 @@ orgs.newOrg('eclipse-zenoh') {
           ],
         },
       ],
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
+      rulesets: [
+        customRuleset("main"),
       ],
     },
   ],
