@@ -12,7 +12,7 @@ local customRuleset(name) =
     requires_pull_request: false,
     required_approving_review_count: null,
     required_status_checks+: [
-      "ci"
+      "CI status checks"
     ],
     requires_commit_signatures: false,
     requires_last_push_approval: false,
