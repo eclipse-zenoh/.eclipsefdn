@@ -13,6 +13,7 @@ orgs.newOrg('eclipse-zenoh') {
     workflows+: {
       default_workflow_permissions: "write",
     },
+    default_branch_name: "main",
   },
   secrets+: [
     orgs.newOrgSecret('CRATES_IO_TOKEN') {
