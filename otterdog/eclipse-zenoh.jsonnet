@@ -106,11 +106,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-backend-influxdb') {
       allow_auto_merge: true,
@@ -124,11 +119,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-backend-rocksdb') {
       allow_auto_merge: true,
@@ -142,11 +132,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-backend-s3') {
       allow_auto_merge: true,
@@ -159,11 +144,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-backend-sql') {
       allow_auto_merge: true,
@@ -208,11 +188,6 @@ orgs.newOrg('eclipse-zenoh') {
             "delete",
             "push"
           ],
-        },
-      ],
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
         },
       ],
     },
@@ -304,11 +279,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('DELETEME') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-java') {
       allow_merge_commit: true,
@@ -355,11 +325,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
@@ -403,11 +368,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-plugin-mqtt') {
       allow_auto_merge: true,
@@ -421,11 +381,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-plugin-ros1') {
       allow_auto_merge: true,
@@ -437,11 +392,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-plugin-ros2dds') {
       allow_auto_merge: true,
@@ -463,11 +413,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-plugin-webserver') {
       allow_auto_merge: true,
@@ -481,11 +426,6 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('zenoh-plugin-zenoh-flow') {
       allow_auto_merge: true,
@@ -525,11 +465,6 @@ orgs.newOrg('eclipse-zenoh') {
           events+: [
             "push"
           ],
-        },
-      ],
-      secrets: [
-        orgs.newRepoSecret('PAT') {
-          value: "********",
         },
       ],
     },
