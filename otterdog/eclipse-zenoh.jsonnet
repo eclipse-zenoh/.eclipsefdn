@@ -530,9 +530,6 @@ orgs.newOrg('eclipse-zenoh') {
       description: "GitHub Actions and workflows used across eclipse-zenoh",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
     },
   ],
 }
