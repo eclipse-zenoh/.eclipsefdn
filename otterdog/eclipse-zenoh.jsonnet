@@ -522,5 +522,14 @@ orgs.newOrg('eclipse-zenoh') {
         customRuleset("main"),
       ],
     },
+    orgs.newRepo('ci') {
+      allow_auto_merge: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "GitHub Actions and workflows used across eclipse-zenoh",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
   ],
 }
