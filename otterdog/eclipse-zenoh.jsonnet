@@ -216,7 +216,8 @@ orgs.newOrg('eclipse-zenoh') {
           events+: [
             "create",
             "delete",
-            "push"
+            "push",
+            "pull_request"
           ],
         },
       ],
