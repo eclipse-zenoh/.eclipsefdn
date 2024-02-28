@@ -211,7 +211,7 @@ orgs.newOrg('eclipse-zenoh') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-c/135565/') {
+        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-c/263729/') {
           content_type: "json",
           events+: [
             "create",
