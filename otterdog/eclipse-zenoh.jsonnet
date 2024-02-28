@@ -220,7 +220,8 @@ orgs.newOrg('eclipse-zenoh') {
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-c/263729/') {
           content_type: "json",
-          events+: readTheDocsWebhookEvents
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-c-webhook-secret"
         },
       ],
       rulesets: [
@@ -241,7 +242,8 @@ orgs.newOrg('eclipse-zenoh') {
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-cpp/263743/') {
           content_type: "json",
-          events+: readTheDocsWebhookEvents
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-cpp-webhook-secret"
         },
       ],
     },
@@ -398,7 +400,8 @@ orgs.newOrg('eclipse-zenoh') {
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-pico/263750/') {
           content_type: "json",
-          events+: readTheDocsWebhookEvents
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-pico-webhook-secret"
         },
       ],
     },
@@ -529,7 +532,8 @@ orgs.newOrg('eclipse-zenoh') {
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-python/263749/') {
           content_type: "json",
-          events+: readTheDocsWebhookEvents
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-python-webhook-secret"
         },
       ],
       rulesets: [
