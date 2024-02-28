@@ -19,6 +19,13 @@ local customRuleset(name) =
     requires_review_thread_resolution: false,
   };
 
+local readTheDocsWebhookEvents = [
+  "create",
+  "delete",
+  "push",
+  "pull_request"
+];
+
 orgs.newOrg('eclipse-zenoh') {
   settings+: {
     dependabot_security_updates_enabled_for_new_repositories: false,
@@ -211,13 +218,10 @@ orgs.newOrg('eclipse-zenoh') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-c/135565/') {
+        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-c/263729/') {
           content_type: "json",
-          events+: [
-            "create",
-            "delete",
-            "push"
-          ],
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-c-webhook-secret"
         },
       ],
       rulesets: [
@@ -235,6 +239,13 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-cpp/263743/') {
+          content_type: "json",
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-cpp-webhook-secret"
+        },
+      ],
     },
     orgs.newRepo('zenoh-csharp') {
       allow_auto_merge: true,
@@ -386,6 +397,13 @@ orgs.newOrg('eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      webhooks: [
+        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-pico/263750/') {
+          content_type: "json",
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-pico-webhook-secret"
+        },
+      ],
     },
     orgs.newRepo('zenoh-plugin-dds') {
       allow_auto_merge: true,
@@ -512,10 +530,10 @@ orgs.newOrg('eclipse-zenoh') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-python/135566/') {
-          events+: [
-            "push"
-          ],
+        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/zenoh-python/263749/') {
+          content_type: "json",
+          events+: readTheDocsWebhookEvents,
+          secret: "pass:bots/iot.zenoh/readthedocs.org/zenoh-python-webhook-secret"
         },
       ],
       rulesets: [
