@@ -120,6 +120,7 @@ orgs.newOrg('eclipse-zenoh') {
       rulesets: [
         customRuleset("main"),
       ],
+      default_branch: "main_old"
     },
     orgs.newRepo('zenoh-backend-filesystem') {
       allow_auto_merge: true,
