@@ -269,40 +269,6 @@ orgs.newOrg('eclipse-zenoh') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('zenoh-flow') {
-      allow_auto_merge: true,
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "zenoh-flow aims at providing a zenoh-based data-flow programming framework for computations that span from the cloud to the device.",
-      homepage: "",
-      secret_scanning_push_protection: "disabled",
-      topics+: [
-        "autonomous-vehicles",
-        "data-science",
-        "dataflow-programming",
-        "machine-learning",
-        "robotics",
-        "ros2",
-        "rust-lang"
-      ],
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-    },
-    orgs.newRepo('zenoh-flow-python') {
-      allow_auto_merge: true,
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "Zenoh Flow Python API",
-      secret_scanning_push_protection: "disabled",
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-    },
     orgs.newRepo('zenoh-go') {
       allow_auto_merge: true,
       allow_merge_commit: true,
