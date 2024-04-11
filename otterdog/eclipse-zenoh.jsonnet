@@ -547,5 +547,19 @@ orgs.newOrg('eclipse-zenoh') {
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('zenoh-ts') {
+      allow_auto_merge: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "TypeScript Interface to the Zenoh Protocol.",
+      homepage: "http://zenoh.io",
+      secret_scanning_push_protection: "disabled",
+      topics+: [
+        "typescript",
+        "zenoh"
+      ],
+      web_commit_signoff_required: false,
+    },
   ],
 }
