@@ -527,5 +527,14 @@ orgs.newOrg('eclipse-zenoh') {
       ],
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('.github') {
+      allow_auto_merge: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "A repository for default files (community health files, issue templates, etc)",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
   ],
 }
