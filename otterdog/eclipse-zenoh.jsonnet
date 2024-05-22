@@ -67,7 +67,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Homebrew tap for Eclipse zenoh formulae (MacOS)",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -79,7 +78,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       has_discussions: true,
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -93,7 +91,6 @@ orgs.newOrg('eclipse-zenoh') {
       dependabot_security_updates_enabled: true,
       description: "zenoh unifies data in motion, data in-use, data at rest and computations. It carefully blends traditional pub/sub with geo-distributed storages, queries and computations, while retaining a level of time and space efficiency that is well beyond any of the mainstream stacks.",
       homepage: "https://zenoh.io",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "distributed-computing",
         "distributed-storage",
@@ -127,7 +124,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using the file system",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -142,7 +138,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using InfluxDB",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -157,7 +152,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using RocksDB",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -172,7 +166,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for Zenoh using AWS S3 API",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -187,7 +180,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using an SQL database (SQLITE3, MySQL, PostgreSQL...)",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -201,7 +193,6 @@ orgs.newOrg('eclipse-zenoh') {
       dependabot_security_updates_enabled: true,
       description: "C API for Zenoh",
       homepage: "http://zenoh.io",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "edge-computing",
         "iot",
@@ -232,7 +223,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "C++ API for zenoh",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -251,7 +241,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "C# API for zenoh",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -263,7 +252,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Some demos using Eclipse zenoh",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -276,7 +264,6 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       description: "Go-lang API for zenoh",
       homepage: "http://zenoh.io",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "edge-computing",
         "go",
@@ -300,7 +287,6 @@ orgs.newOrg('eclipse-zenoh') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "http://zenoh.io",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "java",
         "scala",
@@ -332,7 +318,6 @@ orgs.newOrg('eclipse-zenoh') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_projects: false,
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -356,7 +341,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse zenoh for pico devices",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -376,7 +360,6 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       description: "A zenoh plug-in that allows to transparently route DDS data.  This plugin can be used by DDS applications, such as ROS2 robotic applications and others, to leverage the zenoh for geographical routing or for better scaling discovery.",
       homepage: "",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "cyclonedds",
         "dds",
@@ -399,7 +382,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in that allows to integrate and/or route MQTT pub/sub with Eclipse Zenoh.",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -413,7 +395,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -429,7 +410,6 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in for ROS2 with a DDS RMW.",
       homepage: "https://zenoh.io",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "cyclonedds",
         "dds",
@@ -452,7 +432,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A zenoh plug-in implementing an HTTP server mapping URLs to zenoh paths. This plugin can be used to set-up a Web server where the resources are retrieved from geo-distributed zenoh storages, each leveraging various backends (file system, database, memory...)",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -467,7 +446,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in that allows to integrate a Zenoh Flow runtime within a Zenoh router.",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -481,7 +459,6 @@ orgs.newOrg('eclipse-zenoh') {
       dependabot_security_updates_enabled: true,
       description: "Python API for zenoh",
       homepage: "http://zenoh.io",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "edge-computing",
         "embedded",
@@ -510,7 +487,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "GitHub Actions and workflows used across eclipse-zenoh",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('zenoh-ts') {
@@ -520,7 +496,6 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       description: "TypeScript Interface to the Zenoh Protocol.",
       homepage: "http://zenoh.io",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "typescript",
         "zenoh"
@@ -533,7 +508,6 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A repository for default files (community health files, issue templates, etc)",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
   ],
