@@ -28,7 +28,6 @@ local readTheDocsWebhookEvents = [
 
 orgs.newOrg('eclipse-zenoh') {
   settings+: {
-    dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse zenoh",
     web_commit_signoff_required: false,
