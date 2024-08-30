@@ -125,6 +125,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'Backend and Storages for zenoh using the file system',
       web_commit_signoff_required: false,
       workflows+: {
@@ -138,6 +139,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
+      dependabot_security_updates_enabled: true,
       delete_branch_on_merge: false,
       description: 'Backend and Storages for zenoh using InfluxDB',
       web_commit_signoff_required: false,
@@ -153,6 +155,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'Backend and Storages for zenoh using RocksDB',
       web_commit_signoff_required: false,
       workflows+: {
@@ -167,6 +170,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'Backend and Storages for Zenoh using AWS S3 API',
       web_commit_signoff_required: false,
       workflows+: {
@@ -224,6 +228,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'C++ API for zenoh',
       web_commit_signoff_required: false,
       workflows+: {
@@ -319,6 +324,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       gh_pages_build_type: 'legacy',
       gh_pages_source_branch: 'gh-pages',
       gh_pages_source_path: '/',
@@ -345,6 +351,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'Eclipse zenoh for pico devices',
       web_commit_signoff_required: false,
       workflows+: {
@@ -366,6 +373,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'A zenoh plug-in that allows to transparently route DDS data.  This plugin can be used by DDS applications, such as ROS2 robotic applications and others, to leverage the zenoh for geographical routing or for better scaling discovery.',
       homepage: '',
       topics+: [
@@ -389,6 +397,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'A Zenoh plug-in that allows to integrate and/or route MQTT pub/sub with Eclipse Zenoh.',
       web_commit_signoff_required: false,
       workflows+: {
@@ -403,6 +412,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: 'write',
@@ -416,6 +426,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'A Zenoh plug-in for ROS2 with a DDS RMW.',
       homepage: 'https://zenoh.io',
       topics+: [
@@ -439,6 +450,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'A zenoh plug-in implementing an HTTP server mapping URLs to zenoh paths. This plugin can be used to set-up a Web server where the resources are retrieved from geo-distributed zenoh storages, each leveraging various backends (file system, database, memory...)',
       web_commit_signoff_required: false,
       workflows+: {
@@ -494,6 +506,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       description: 'GitHub Actions and workflows used across eclipse-zenoh',
       web_commit_signoff_required: false,
       rulesets: [
