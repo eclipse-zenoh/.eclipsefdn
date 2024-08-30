@@ -236,6 +236,9 @@ orgs.newOrg('eclipse-zenoh') {
           secret: 'pass:bots/iot.zenoh/readthedocs.org/zenoh-cpp-webhook-secret',
         },
       ],
+      rulesets: [
+        customRuleset('main'),
+      ],
     },
     orgs.newRepo('zenoh-csharp') {
       allow_auto_merge: true,
@@ -353,6 +356,9 @@ orgs.newOrg('eclipse-zenoh') {
           events+: readTheDocsWebhookEvents,
           secret: 'pass:bots/iot.zenoh/readthedocs.org/zenoh-pico-webhook-secret',
         },
+      ],
+      rulesets: [
+        customRuleset('main'),
       ],
     },
     orgs.newRepo('zenoh-plugin-dds') {
@@ -490,6 +496,9 @@ orgs.newOrg('eclipse-zenoh') {
       delete_branch_on_merge: false,
       description: 'GitHub Actions and workflows used across eclipse-zenoh',
       web_commit_signoff_required: false,
+      rulesets: [
+        customRuleset('main'),
+      ],
     },
     orgs.newRepo('zenoh-ts') {
       allow_auto_merge: true,
