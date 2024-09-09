@@ -374,7 +374,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: 'A zenoh plug-in that allows to transparently route DDS data.  This plugin can be used by DDS applications, such as ROS2 robotic applications and others, to leverage the zenoh for geographical routing or for better scaling discovery.',
+      description: 'A zenoh plug-in that allows to transparently route DDS data.  This plugin can be used by DDS applications to leverage zenoh for geographical routing or for better scaling discovery. For ROS2 robotic applications, use https://github.com/eclipse-zenoh/zenoh-plugin-ros2dds',
       homepage: '',
       topics+: [
         'cyclonedds',
@@ -427,7 +427,7 @@ orgs.newOrg('eclipse-zenoh') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: 'A Zenoh plug-in for ROS2 with a DDS RMW.',
+      description: 'A Zenoh plug-in for ROS2 with a DDS RMW. See https://discourse.ros.org/t/ros-2-alternative-middleware-report/ for the advantages of using this plugin over other DDS RMW implementations.',
       homepage: 'https://zenoh.io',
       topics+: [
         'cyclonedds',
