@@ -63,6 +63,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('homebrew-zenoh') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Homebrew tap for Eclipse zenoh formulae (MacOS)",
@@ -85,6 +86,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
@@ -120,6 +122,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-backend-filesystem') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using the file system",
@@ -134,6 +137,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-backend-influxdb') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using InfluxDB",
@@ -148,6 +152,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-backend-rocksdb') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for zenoh using RocksDB",
@@ -162,6 +167,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-backend-s3') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Backend and Storages for Zenoh using AWS S3 API",
@@ -187,6 +193,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-c') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
@@ -219,6 +226,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-cpp') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "C++ API for zenoh",
@@ -278,6 +286,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-java') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
@@ -311,6 +320,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-kotlin') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       gh_pages_build_type: "legacy",
@@ -337,6 +347,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-pico') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Eclipse zenoh for pico devices",
@@ -355,6 +366,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-plugin-dds') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A zenoh plug-in that allows to transparently route DDS data.  This plugin can be used by DDS applications, such as ROS2 robotic applications and others, to leverage the zenoh for geographical routing or for better scaling discovery.",
@@ -378,6 +390,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-plugin-mqtt') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in that allows to integrate and/or route MQTT pub/sub with Eclipse Zenoh.",
@@ -392,6 +405,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-plugin-ros1') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
@@ -405,6 +419,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-plugin-ros2dds') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in for ROS2 with a DDS RMW.",
@@ -428,6 +443,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-plugin-webserver') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A zenoh plug-in implementing an HTTP server mapping URLs to zenoh paths. This plugin can be used to set-up a Web server where the resources are retrieved from geo-distributed zenoh storages, each leveraging various backends (file system, database, memory...)",
@@ -442,6 +458,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-plugin-zenoh-flow') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "A Zenoh plug-in that allows to integrate a Zenoh Flow runtime within a Zenoh router.",
@@ -453,6 +470,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-python') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
@@ -483,6 +501,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('ci') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "GitHub Actions and workflows used across eclipse-zenoh",
@@ -491,6 +510,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newRepo('zenoh-ts') {
       allow_auto_merge: true,
       allow_merge_commit: true,
+      allow_squash_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "TypeScript Interface to the Zenoh Protocol.",
