@@ -2,21 +2,16 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 local customRuleset(name) = 
   orgs.newRepoRuleset(name) {
-    allows_updates: true,
     bypass_actors+: [
       "#Write"
     ],
     include_refs+: [
       std.format("refs/heads/%s", name),
     ],
-    requires_pull_request: false,
-    required_approving_review_count: null,
+    required_pull_request: null,
     required_status_checks+: [
       "CI status checks"
     ],
-    requires_commit_signatures: false,
-    requires_last_push_approval: false,
-    requires_review_thread_resolution: false,
   };
 
 local readTheDocsWebhookEvents = [
