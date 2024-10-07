@@ -9,9 +9,11 @@ local customRuleset(name) =
       std.format("refs/heads/%s", name),
     ],
     required_pull_request: null,
-    required_status_checks+: [
-      "CI status checks"
-    ],
+    required_status_checks+: {
+      status_checks+: [
+        "CI status checks"
+      ],
+    },
   };
 
 local readTheDocsWebhookEvents = [
