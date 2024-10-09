@@ -35,25 +35,31 @@ orgs.newOrg('eclipse-zenoh') {
   },
   secrets+: [
     orgs.newOrgSecret('CRATES_IO_TOKEN') {
-      value: "********",
+      value: "pass:bots/iot.zenoh/crates.io/api-token",
     },
     orgs.newOrgSecret('DOCKER_COM_PASSWORD') {
-      value: "********",
+      value: "pass:bots/iot.zenoh/docker.com/api-token",
     },
     orgs.newOrgSecret('DOCKER_COM_USERNAME') {
-      value: "********",
+      value: "pass:bots/iot.zenoh/docker.com/username",
     },
     orgs.newOrgSecret('BOT_TOKEN_WORKFLOW') {
       value: "pass:/bots/iot.zenoh/github.com/api-token-workflow",
     },
     orgs.newOrgSecret('PYPI_ORG_TOKEN') {
-      value: "********",
+      value: "pass:bots/iot.zenoh/pypi.org/api-token",
     },
     orgs.newOrgSecret('SSH_PASSPHRASE') {
-      value: "********",
+      value: "pass:bots/iot.zenoh/gpg/passphrase",
     },
     orgs.newOrgSecret('SSH_PRIVATE_KEY') {
-      value: "********",
+      value: "pass:bots/iot.zenoh/gpg/secret-subkeys.asc",
+    },
+    orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
+      value: "pass:bots/iot.zenoh/oss.sonatype.org/gh-token-password",
+    },
+    orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
+      value: "pass:bots/iot.zenoh/oss.sonatype.org/gh-token-username",
     },
   ],
   _repositories+:: [
