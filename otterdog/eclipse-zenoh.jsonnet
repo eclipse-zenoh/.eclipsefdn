@@ -534,5 +534,19 @@ orgs.newOrg('eclipse-zenoh') {
       description: 'A repository for default files (community health files, issue templates, etc)',
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('zenoh-dissector') {
+      allow_auto_merge: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: 'Wireshark dissector for the Zenoh protocol',
+      homepage: 'http://zenoh.io',
+      topics+: [
+        'wireshark',
+        'zenoh',
+      ],
+      web_commit_signoff_required: false,
+    },
   ],
 }
