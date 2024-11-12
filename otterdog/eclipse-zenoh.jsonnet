@@ -49,10 +49,13 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newOrgSecret('PYPI_ORG_TOKEN') {
       value: 'pass:bots/iot.zenoh/pypi.org/api-token',
     },
-    orgs.newOrgSecret('SSH_PASSPHRASE') {
+    orgs.newOrgSecret('ORG_GPG_KEY_ID') {
+      value: 'pass:bots/iot.zenoh/gpg/key_id',
+    },
+    orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
       value: 'pass:bots/iot.zenoh/gpg/passphrase',
     },
-    orgs.newOrgSecret('SSH_PRIVATE_KEY') {
+    orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
       value: 'pass:bots/iot.zenoh/gpg/secret-subkeys.asc',
     },
     orgs.newOrgSecret('ORG_OSSRH_PASSWORD') {
