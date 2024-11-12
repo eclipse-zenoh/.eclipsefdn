@@ -49,6 +49,9 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newOrgSecret('PYPI_ORG_TOKEN') {
       value: 'pass:bots/iot.zenoh/pypi.org/api-token',
     },
+    orgs.newOrgSecret('ORG_GPG_KEY_ID') {
+      value: 'pass:bots/iot.zenoh/gpg/key_id',
+    },
     orgs.newOrgSecret('ORG_GPG_PASSPHRASE') {
       value: 'pass:bots/iot.zenoh/gpg/passphrase',
     },
