@@ -61,7 +61,7 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newOrgSecret('ORG_GPG_PRIVATE_KEY') {
       value: 'pass:bots/iot.zenoh/gpg/secret-subkeys.asc',
     },
-    orgs.newOrgSecret('SSH_PASSHPHRASE') {
+    orgs.newOrgSecret('SSH_PASSPHRASE') {
       value: 'pass:bots/iot.zenoh/gpg/passphrase',
     },
     orgs.newOrgSecret('SSH_PRIVATE_KEY') {
