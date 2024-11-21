@@ -537,6 +537,9 @@ orgs.newOrg('eclipse-zenoh') {
         'zenoh',
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: 'write',
+      },
     },
     orgs.newRepo('.github') {
       allow_auto_merge: true,
