@@ -73,6 +73,9 @@ orgs.newOrg('eclipse-zenoh') {
     orgs.newOrgSecret('ORG_OSSRH_USERNAME') {
       value: 'pass:bots/iot.zenoh/oss.sonatype.org/gh-token-username',
     },
+    orgs.newOrgSecret('ORG_NPMJS_TOKEN') {
+      value: 'pass:bots/iot.zenoh/npmjs.com/api-token',
+    },
   ],
   _repositories+:: [
     orgs.newRepo('homebrew-zenoh') {
