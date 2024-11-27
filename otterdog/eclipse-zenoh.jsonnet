@@ -549,6 +549,7 @@ orgs.newOrg('eclipse-zenoh') {
       rulesets: [
         customRuleset('main'),
       ],
+      gh_pages_build_type: 'workflow',
     },
     orgs.newRepo('.github') {
       allow_auto_merge: true,
