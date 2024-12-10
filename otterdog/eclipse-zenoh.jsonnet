@@ -544,7 +544,12 @@ orgs.newOrg('eclipse-zenoh') {
         default_workflow_permissions: 'write',
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+          branch_policies: [
+            "main",
+          ],
+          deployment_branch_policy: "selected",
+        },
       ],
       rulesets: [
         customRuleset('main'),
