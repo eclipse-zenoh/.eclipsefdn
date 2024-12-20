@@ -23,7 +23,7 @@ local readTheDocsWebhookEvents = [
   'pull_request',
 ];
 
-orgs.newOrg('eclipse-zenoh') {
+orgs.newOrg('iot.zenoh', 'eclipse-zenoh') {
   settings+: {
     description: '',
     name: 'Eclipse zenoh',
