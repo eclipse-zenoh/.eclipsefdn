@@ -76,6 +76,9 @@ orgs.newOrg('iot.zenoh', 'eclipse-zenoh') {
     orgs.newOrgSecret('ORG_NPMJS_TOKEN') {
       value: 'pass:bots/iot.zenoh/npmjs.com/api-token',
     },
+    orgs.newOrgSecret('CODECOV_TOKEN') {
+      value: "pass:bots/iot.zenoh/codecov.io/codecov-token",
+    },
   ],
   _repositories+:: [
     orgs.newRepo('homebrew-zenoh') {
