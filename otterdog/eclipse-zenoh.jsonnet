@@ -316,6 +316,9 @@ orgs.newOrg('iot.zenoh', 'eclipse-zenoh') {
       workflows+: {
         default_workflow_permissions: 'write',
       },
+      rulesets: [
+        customRuleset('main'),
+      ],
     },
     orgs.newRepo('zenoh-flat-jni') {
       allow_auto_merge: true,
